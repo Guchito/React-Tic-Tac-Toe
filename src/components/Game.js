@@ -8,6 +8,18 @@ const style = {
     margin: '20px auto',
     textAlign: 'center',
     color: 'darkblue',
+    fontSize: '20px',
+}
+
+const buttonStyle = {
+    background: 'lightblue',
+    border: '2px solid darkblue',
+    fontSize: '20px',
+    fontWeight: '800',
+    cursor: 'pointer',
+    outline: 'none',
+    padding: '10px 20px',
+    borderRadius: '10px'
 }
 
 const Game = () => {
@@ -28,7 +40,7 @@ const Game = () => {
     }
 
     const renderMoves = () => {
-        return <button onClick= {() => setBoard(Array(9).fill(null))}> Start game </button>
+        return <button style={buttonStyle} onClick= {() => setBoard(Array(9).fill(null))}> Start game </button>
     }
 
     return(
