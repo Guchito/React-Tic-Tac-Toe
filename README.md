@@ -6,6 +6,9 @@ A simple Tic Tac Toe game built with React and JavaScript.
 
 This is a basic implementation of the classic Tic Tac Toe game, where two players, X and O, take turns marking a square on a 3x3 grid. The first player to get three in a row (horizontally, vertically, or diagonally) wins the game.
 
+## Try it live
+To try the game on your browser, click [Here!](https://react-toe-tac-tic.netlify.app/)
+
 ## Gameplay
 
 * The game starts with an empty grid.
