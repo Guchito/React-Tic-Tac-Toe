@@ -39,8 +39,13 @@ const Game = () => {
         setXisNext(!xIsNext);
     }
 
+    const isDraw = () => {
+        return board.every(square => square !== null);
+    }
+
     const renderMoves = () => {
-        return <button style={buttonStyle} onClick= {() => setBoard(Array(9).fill(null))}> Start game </button>
+       
+        return <button style={buttonStyle} onClick= {() => setBoard(Array(9).fill(null))}> Start game </button>;
     }
 
     return(
@@ -48,7 +53,13 @@ const Game = () => {
             <Header />
             <Board squares={board} onClick={handleClick} />
             <div style={style}>
-                <p> { winner ? 'Winner: ' + winner : (xIsNext ? 'X' : 'O') + ' Turn' }</p>
+                <p> 
+                    { winner ? 
+                        `Winner: ${winner}` : 
+                        isDraw() ? 
+                        "It's a draw!" : 
+                        (xIsNext ? 'X' : 'O') + ' Turn' }
+                </p>
                 {renderMoves()}
             </div>
         </>
